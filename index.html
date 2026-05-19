@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto dCore</title>
+    <link href="estilos.css"  rel="stylesheet">
+    <!-- Fuentes: Indie Flower, Winky Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>dCore</h1>
+        <nav>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Comics</a></li>
+                <li><a href="">E-Books</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="trends"></section>
+
+        <br>
+        <section class="lanzamientos-section">
+            <h2>Nuevos lanzamientos</h2>
+            <div class="lanzamientos-container">
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <section class="populares-section">
+            <h2>Comics Populares</h2>
+            <div class="comics-populares-container">
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <h2>E-Books Populares</h2>
+            <div class="ebooks-populares-container">
+                <div class="popular-subcontainer"> 
+                    <img src="lecturas img/la-ultima-estacion.png" alt="La ultima estación" width="200">
+                    <div class="popular-content">
+                        <h3>La ultima estación</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="lecturas img/donde-estan-todos.png" alt="Donde estan todos" width="200">
+                    <div class="popular-content">
+                        <h3>Donde estan todos</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="lecturas img/dos-marionetas-enamoradas.png" alt="Dos marionetas enamoradas" width="200">
+                    <div class="popular-content">
+                        <h3>Dos marionetas enamoradas</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+                <div class="popular-subcontainer">
+                    <img src="https://placehold.co/200x280" width="200" height="280">
+                    <div class="popular-content">
+                        <h3>Pensando titulo</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <h2>Contacto</h2>
+        <section class="contacto-section" id="contacto">
+            <div class="contacto-form">
+                <form action="https://formspree.io/f/xnjrnjoy" method="post" enctype="">
+                    <label>Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escriba aquí su nombre" required maxlength="20">
+                    
+                    <label>Email:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Escriba aquí su correo" required>
+                    
+                    <label>Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Escriba aquí el asunto" required>
+                    
+                    <label>Mensaje:</label>
+                    <textarea placeholder="Escriba aquí su mensaje" required></textarea>
+                    
+                    <button type="submit" class="button-form">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Derechos reservados</p>
+        <section class="redes-sociales">
+            <i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255);"></i>
+            <a href="https://www.instagram.com/2020_lovestay/?next=" target="_blank">Instagram</a>
+        </section>
+    </footer>
+    <script src="https://kit.fontawesome.com/bacc6557ff.js" crossorigin="anonymous"></script>
+</body>
+</html>
