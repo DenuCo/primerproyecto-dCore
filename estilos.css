@@ -17,7 +17,7 @@ label{
 .layout{
     display: grid;
     grid-template-columns: 170px 1fr;
-    grid-template-rows: 80px 1fr 60px;
+    grid-template-rows: 80px 1fr 70px;
 
     grid-template-areas: 
         "header header"
@@ -66,7 +66,8 @@ header > input{
     text-decoration: none;
     color: black;
     font-size: 22px;
-    background-color: white;
+    background-color: rgb(149, 134, 201);
+    border: 2px solid black;
     padding: 5px;
     border-radius: 5px;
 }
@@ -80,14 +81,23 @@ header > input{
 .footer{
     grid-area: footer;
     background-color: #343434;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Proximamente Carrusel de Inicio */
 .trends{
     border: 2px solid black;
+    border-radius: 15px;
     height: 400px;
-    background-image: url('https://placehold.co/768x400')
+    background-image: url('lecturas img/la-noche-es-mas-peligrosa-dentro-del-castillo.jpg');
+    background-position: center;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trends h2{
+    font-size: 50px;
 }
 
 /* Nuevos lanzamientos, Comics Populares, E-Books Populares */
