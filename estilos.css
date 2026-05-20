@@ -16,8 +16,8 @@ label{
 /* Layout de la pagina */
 .layout{
     display: grid;
-    grid-template-columns: 170px 1fr;
-    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 85px 1fr 70px;
 
     grid-template-areas: 
         "header header"
@@ -29,27 +29,41 @@ label{
 /* Header */
 .header{
     grid-area: header;
-    background-color: #902b55;
+    background-color: #16202c;
+
     display: flex;
     flex-direction: row;
-    padding: 20px;
     justify-content: space-between;
     align-items: center;
+    
+    padding: 20px;
 }
 header > h1{
     font-family: "Indie Flower", sans-serif;
-    font-size: 55px;
+    font-size: 50px;
     line-height: 1;   /* achico la caja de la fuente */
 }
 header > input{
     padding: 5px;
     width: 50%;
 }
+.usuario-registrado ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+.usuario-registrado a{
+    text-decoration: none;
+    cursor: pointer;
+}
 /* Menu de navegacion */
 .menu{
     grid-area: menu;
-    background-color: #917220;
-    padding: 40px;
+    background-color: #16202c;
+
+    padding: 35px;
+
     display: flex;
     justify-content: center;    /* centra el menu horizontalmente */
 }
@@ -57,7 +71,7 @@ header > input{
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 .menu-flex li{
     border-radius: 5px;
@@ -65,33 +79,49 @@ header > input{
 .menu-flex a{
     text-decoration: none;
     color: black;
-    font-size: 22px;
+    font-size: 20px;
+
     background-color: rgb(149, 134, 201);
+
     border: 2px solid black;
-    padding: 5px;
     border-radius: 5px;
+
+    padding: 5px;
 }
 /* Contenido principal */
 .main-content{
     grid-area: contenido;
-    background-color: #072f4e;
+    background-color: #0D2B35;
     padding: 25px;
+
+    border-top: 2px dotted rgba(255, 255, 255, 0.4);
+    border-left: 2px dotted rgba(255, 255, 255, 0.4);
 }
 /* Footer */
 .footer{
     grid-area: footer;
-    background-color: #343434;
+    background-color: #111111;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border-top: 2px dotted rgba(255, 255, 255, 0.4);
 }
 
 /* Proximamente Carrusel de Inicio */
 .trends{
     border: 2px solid black;
     border-radius: 15px;
+
     height: 400px;
+
     background-image: url('lecturas img/la-noche-es-mas-peligrosa-dentro-del-castillo.jpg');
     background-position: center;
+
     padding: 25px;
+    margin-bottom: 25px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,37 +131,41 @@ header > input{
 }
 
 /* Nuevos lanzamientos, Comics Populares, E-Books Populares */
-.lanzamientos-container, .comics-populares-container, .ebooks-populares-container{
+.cards-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+
     gap: 20px;
-    padding-top: 30px;
+
+    padding-top: 20px;
+    margin-bottom: 25px;
 }
-.popular-subcontainer{
+.obra-container{
     width: 200px;
     border-radius: 10px;
     overflow: hidden;
 }
 
 /* Formulario Contacto */
-.contacto-section {
-    border: 2px solid black;
-    border-radius: 15px;
-    background-color: aliceblue;
-    margin-top: 20px;
-}
 .contacto-form form{
-    margin: 20px 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    border: 2px solid black;
+    border-radius: 15px;
+
+    background-color: aliceblue;
+
+    margin-top: 20px;
+    padding: 20px;
 }
-input{
+.contacto-form input{
     border: 1px solid gray
 }
-input:hover{
+.contacto-form input:hover, contacto-form textarea:hover{
     background-color:lightgrey;
 }
 .contacto-form button{
