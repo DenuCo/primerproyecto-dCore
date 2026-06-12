@@ -1,4 +1,4 @@
-# dCore 📖✨
+# dCore
 
 Un espacio digital diseñado para compartir ideas originales, enfocado en la difusión de cómics y e-books.
 

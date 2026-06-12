@@ -1,0 +1,1 @@
+console.log("¡El archivo JavaScript de dCore está conectado y funcionando!");
