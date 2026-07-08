@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comics dCore</title>
+    <link href="css/carrito.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div class="layout">
+        <header class="header">
+            <h1 class="logo"><a href="index.html">dCore</a></h1>
+            <input type="search" id="buscador" name="buscador" placeholder="Buscar comic...">
+            <div class="usuario-registrado">
+                <ul>
+                    <li><a href="">Favoritos</a></li>
+                    <li><a href="">Iniciar sesión</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <nav class="menu">
+            <ul class="menu-flex">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="comics.html">Comics</a></li>
+                <li><a href="ebooks.html">E-Books</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <!-- Carrito de Compras -->
+            <div id="carrito">
+                <h2>Carrito de Compras</h2>
+                <ul id="lista-carrito">
+                </ul>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>2026 dCore | Todos los derechos reservados</p>
+            <div class="redes-sociales">
+                <p>Redes sociales</p>
+                <i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255);"></i>
+                <a href="https://www.instagram.com/webtoonofficial/" target="_blank">Instagram</a>
+            </div>
+        </footer>
+        <script src="https://kit.fontawesome.com/bacc6557ff.js" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+    </div>
+</body>
+</html>

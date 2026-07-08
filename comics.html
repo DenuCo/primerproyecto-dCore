@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comics dCore</title>
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/comics.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 </head>
@@ -12,7 +12,7 @@
     <div class="layout">
         <header class="header">
             <h1 class="logo"><a href="index.html">dCore</a></h1>
-            <input type="search" id="buscador" name="buscador" placeholder="Buscar...">
+            <input type="search" id="buscador" name="buscador" placeholder="Buscar comic...">
             <div class="usuario-registrado">
                 <ul>
                     <li><a href="">Favoritos</a></li>
@@ -26,7 +26,8 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="comics.html">Comics</a></li>
                 <li><a href="ebooks.html">E-Books</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
             </ul>
         </nav>
         <main class="main-content">
@@ -63,28 +64,6 @@
                             <h3>Pensando titulo</h3>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="contacto-section" id="contacto">
-            <h2>Contacto</h2>
-                <div class="contacto-form">
-                    <form action="https://formspree.io/f/xnjrnjoy" method="post" enctype="">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Escriba aquí su nombre" required maxlength="20">
-                        
-                        <label for="correo">Email:</label>
-                        <input type="email" id="correo" name="correo" placeholder="Escriba aquí su correo" required>
-                        
-                        <label for="asunto">Asunto:</label>
-                        <input type="text" id="asunto" name="asunto" placeholder="Escriba aquí el asunto" required>
-                        
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" placeholder="Escriba aquí su mensaje" required></textarea>
-                        
-                        <button type="submit" class="button-form">
-                            Enviar mensaje
-                        </button>
-                    </form>
                 </div>
             </section>
         </main>
