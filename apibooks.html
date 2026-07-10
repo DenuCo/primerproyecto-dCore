@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comics dCore</title>
-    <link href="css/carrito.css" rel="stylesheet">
+    <link href="css/apibooks.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -31,13 +31,10 @@
             </ul>
         </nav>
         <main class="main-content">
-            <!-- Carrito de Compras. Solo para obras personales (no de la API REST) -->
-            <div id="carrito-de-compras">
-                <h2>Carrito de Compras (<span id="contador-productos">0</span> productos)</h2>
-                <ul id="lista-carrito"></ul>
-                <p>Total: $<span id="total-carrito">0</span></p>
-                <button id="vaciar-carrito">Vaciar Carrito</button>
-                <button id="comprar-carrito">Comprar</button>
+            <!-- Libros de la api rest -->
+            <div id="carrito">
+                <h2>TOP 10 recomendaciones de libros</h2>
+                <div id="productos-container"></div>
             </div>
         </main>
 

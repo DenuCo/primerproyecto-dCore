@@ -66,7 +66,7 @@ header > input{
     grid-area: menu;
     background-color: #16202c;
 
-    padding: 35px;
+    padding: 20px;
 
     display: flex;
     justify-content: center;    /* centra el menu horizontalmente */
@@ -105,30 +105,45 @@ header > input{
     border-top: 2px dotted rgba(255, 255, 255, 0.4);
     border-left: 2px dotted rgba(255, 255, 255, 0.4);
 }
-#lista-carrito {
-list-style: none;
-padding: 0;
+#lista-carrito, #lista-favoritos {
+    list-style: none;
+    padding: 0;
 }
-#lista-carrito li {
-background-color: #f4f4f4;
-margin: 5px 0; /* Superior-Inferior Izquierda-Derecha*/
-padding: 8px;
-border: 1px solid #ccc;
-font-family: "Winky Sans";
+#lista-carrito li, #lista-favoritos li {
+    background-color: #f4f4f4;
+    margin: 5px 0; /* Superior-Inferior Izquierda-Derecha*/
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-family: "Winky Sans";
 }
-#vaciar-carrito {
-margin-top: 10px;
-padding: 10px 15px;
-background-color: darkred;
-color: white;
-border-radius: 5px;
-border: 2px solid rgb(255, 145, 145);
-font-size: 15px;
-font-family: "Winky Sans";
-cursor: pointer;
+/* ----- Boton Vaciar Carrito y Vaciar Favoritos ---- */
+#vaciar-carrito, #vaciar-favoritos {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: darkred;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 145, 145);
+    font-size: 15px;
+    font-family: "Winky Sans";
+    cursor: pointer;
 }
-#vaciar-carrito:hover {
-background-color: rgb(255, 0, 13);
+#vaciar-carrito:hover, #vaciar-favoritos:hover {
+    background-color: rgb(255, 0, 13);
+}
+#comprar-carrito {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: rgb(73, 116, 17);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(114, 212, 131);
+    font-size: 15px;
+    font-family: "Winky Sans";
+    cursor: pointer;
+}
+#comprar-carrito:hover {
+    background-color: rgb(44, 153, 62);
 }
 /* Footer */
 .footer{
@@ -140,23 +155,4 @@ background-color: rgb(255, 0, 13);
     justify-content: space-evenly;
 
     border-top: 2px dotted rgba(255, 255, 255, 0.4);
-}
-
-/* Contenedor de Comics */
-.cards-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    gap: 20px;
-
-    padding-top: 20px;
-    margin-bottom: 25px;
-}
-.obra-container{
-    width: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
 }

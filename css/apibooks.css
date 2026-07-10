@@ -106,58 +106,27 @@ header > input{
     border-left: 2px dotted rgba(255, 255, 255, 0.4);
 }
 
-/* Contenedor de Comics */
-.cards-container{
+/* Contenedor de Libros de la API */
+#productos-container{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: left;
     flex-wrap: wrap;
 
-    gap: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
-    padding-top: 20px;
-    margin-bottom: 25px;
-}
-.obra-container{
-    width: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
+    gap: 25px;
+
 }
 
-/* Contenedor de botones */
-.al-carrito{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-/* Botones Agregar al Carrito y Agregar a Favoritos */
-.agregar-carrito {
-    background-color: rgb(168, 152, 226);
-    color: black;
-    border: 2px solid darkslategrey;
-    border-radius: 20px;
-    padding: 5px;
-
-    width: 80px;
-    height: 40px;
-    cursor: pointer;
-}
-
-.agregar-carrito:hover {
-    background-color: rgb(120, 105, 175);
-}
-
+/* Boton Agregar a Favoritos*/
 .agregar-favorito {
     background-color: #e0b169;
     color: black;
-    border: 2px solid darkslategrey;
+    border: 2px solid black;
     border-radius: 20px;
-    padding: 5px;
-
-    width: 80px;
-    height: 40px;
+    padding: 8px 12px;
     cursor: pointer;
 }
 

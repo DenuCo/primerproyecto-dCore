@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebooks dCore</title>
-    <link href="css/main.css"  rel="stylesheet">
+    <link href="css/ebooks.css"  rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-</head>
 </head>
 <body>
     <div class="layout">
@@ -15,8 +14,9 @@
             <input type="search" id="buscador" name="buscador" placeholder="Buscar ebook...">
             <div class="usuario-registrado">
                 <ul>
-                    <li><a href="">Favoritos</a></li>
-                    <li><a href="">Iniciar sesión</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="favoritos.html">Favoritos</a></li>
+                    <li><a href="#" id="iniciar-sesion">Iniciar sesión</a></li>
                 </ul>
             </div>
         </header>
@@ -26,7 +26,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="comics.html">Comics</a></li>
                 <li><a href="ebooks.html">E-Books</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="apibooks.html">API BOOKS</a></li>
                 <li><a href="carrito.html">Carrito</a></li>
             </ul>
         </nav>
@@ -35,33 +35,62 @@
                 <h2>Nuevos E-Books</h2>
                 <div class="cards-container">
                     <div class="obra-container">
-                        <img src="https://placehold.co/200x280" width="200" height="280" alt="portada de una nueva obra">
+                        <img src="img/dos-marionetas-enamoradas.png" width="200" alt="Dos maniquis de madera de pie, uno frente a otro, estan mirandose">
                         <div class="titulo-container">
-                            <h3>Pensando titulo</h3>
+                            <h3>Dos marionetas enamoradas</h3>
+                        </div>
+                        <div class="al-carrito">
+                            <p class="precio">$10</p>
+                            <button class="agregar-carrito" data-id="6" data-nombre="Dos marionetas enamoradas" data-precio="10">Agregar al Carrito</button>
+                            <button class="agregar-favorito" data-id="6" data-nombre="Dos marionetas enamoradas" data-precio="10">Agregar a Favoritos</button>
                         </div>
                     </div>
+
                     <div class="obra-container">
-                        <img src="https://placehold.co/200x280" width="200" height="280" alt="portada de una nueva obra">
+                        <img src="img/donde-estan-todos.png" width="200" alt="Ilustracion en blanco y negro de un grupo de fantasmas deambulando por una calle entre casas de aspecto antiguo">
                         <div class="titulo-container">
-                            <h3>Pensando titulo</h3>
+                            <h3>Donde estan todos</h3>
+                        </div>
+                        <div class="al-carrito">
+                            <p class="precio">$10</p>
+                            <button class="agregar-carrito" data-id="7" data-nombre="Donde estan todos" data-precio="10">Agregar al Carrito</button>
+                            <button class="agregar-favorito" data-id="7" data-nombre="Donde estan todos" data-precio="10">Agregar a Favoritos</button>
                         </div>
                     </div>
+
                     <div class="obra-container">
-                        <img src="https://placehold.co/200x280" width="200" height="280" alt="portada de una nueva obra">
+                        <img src="img/el-eco-de-las-estrellas.png" width="200" height="280" alt="Silueta de una persona al borde de un acantilado observando una inmensa y brillante galaxia en el cielo nocturno">
                         <div class="titulo-container">
-                            <h3>Pensando titulo</h3>
+                            <h3>El eco de las estrellas</h3>
+                        </div>
+                        <div class="al-carrito">
+                            <p class="precio">$10</p>
+                            <button class="agregar-carrito" data-id="8" data-nombre="El eco de las estrellas" data-precio="10">Agregar al Carrito</button>
+                            <button class="agregar-favorito" data-id="8" data-nombre="El eco de las estrellas" data-precio="10">Agregar a Favoritos</button>
                         </div>
                     </div>
-                    <div class="obra-container">
-                        <img src="https://placehold.co/200x280" width="200" height="280" alt="portada de una nueva obra">
+
+                    <div class="obra-container"> 
+                        <img src="img/la-ultima-estacion.png" width="200" alt="Ilustracion con tonos pastel de un tren verde y blanco llegando a una estacion al aire libre rodeada de arboles">
                         <div class="titulo-container">
-                            <h3>Pensando titulo</h3>
+                            <h3>La ultima estación</h3>
+                        </div>
+                        <div class="al-carrito">
+                            <p class="precio">$10</p>
+                            <button class="agregar-carrito" data-id="9" data-nombre="La ultima estacion" data-precio="10">Agregar al Carrito</button>
+                            <button class="agregar-favorito" data-id="9" data-nombre="La ultima estacion" data-precio="10">Agregar a Favoritos</button>
                         </div>
                     </div>
+
                     <div class="obra-container">
-                        <img src="https://placehold.co/200x280" width="200" height="280" alt="portada de una nueva obra">
+                        <img src="img/el-laberinto-de-la-llave-olvidada.png" width="200" height="280" alt="Antigua llave brillante tirada sobre un camino de adoquines en medio de un bosque oscuro y rodeado de niebla">
                         <div class="titulo-container">
-                            <h3>Pensando titulo</h3>
+                            <h3>El laberinto de la llave olvidada</h3>
+                        </div>
+                        <div class="al-carrito">
+                            <p class="precio">$10</p>
+                            <button class="agregar-carrito" data-id="10" data-nombre="El laberinto de la llave olvidada" data-precio="10">Agregar al Carrito</button>
+                            <button class="agregar-favorito" data-id="10" data-nombre="El laberinto de la llave olvidada" data-precio="10">Agregar a Favoritos</button>
                         </div>
                     </div>
                 </div>

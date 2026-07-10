@@ -66,7 +66,7 @@ header > input{
     grid-area: menu;
     background-color: #16202c;
 
-    padding: 25px;
+    padding: 20px;
 
     display: flex;
     justify-content: center;    /* centra el menu horizontalmente */
@@ -105,17 +105,6 @@ header > input{
     border-top: 2px dotted rgba(255, 255, 255, 0.4);
     border-left: 2px dotted rgba(255, 255, 255, 0.4);
 }
-/* Footer */
-.footer{
-    grid-area: footer;
-    background-color: #111111;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    border-top: 2px dotted rgba(255, 255, 255, 0.4);
-}
 
 /* Proximamente Carrusel de Inicio */
 .trends{
@@ -124,20 +113,16 @@ header > input{
 
     height: 400px;
 
-    background-image: url('../img/la-noche-es-mas-peligrosa-dentro-del-castillo.jpg');
-    background-position: center;
+    overflow: hidden;
 
-    padding: 25px;
-    margin-bottom: 25px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
+    margin-bottom: 20px;
 }
-.trends h2{
-    font-size: 50px;
+.trends-media {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* el gif "rellena" todo el espacio sin deformarse */
 }
 
 /* Nuevos lanzamientos, Comics Populares, E-Books Populares */
@@ -156,21 +141,46 @@ header > input{
     width: 200px;
     border-radius: 10px 10px 0 0; /* Bordes: Superior-Izq, Superior-Der, Inferior-Der, Inferior-Izq */
     overflow: hidden;
-    cursor: pointer;
 }
 
-/* Carrito */
+/* Contenedor de botones */
 .al-carrito{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.al-carrito button{
+
+/* Botones Agregar al Carrito y Agregar a Favoritos */
+.agregar-carrito {
+    background-color: rgb(168, 152, 226);
+    color: black;
     border: 2px solid darkslategrey;
     border-radius: 20px;
-    padding: 10px;
-    width: fit-content;
+    padding: 5px;
+
+    width: 80px;
+    height: 40px;
     cursor: pointer;
+}
+
+.agregar-carrito:hover {
+    background-color: rgb(120, 105, 175);
+}
+
+.agregar-favorito {
+    background-color: #e0b169;
+    color: black;
+    border: 2px solid darkslategrey;
+    border-radius: 20px;
+    padding: 5px;
+
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.agregar-favorito:hover {
+    background-color: #c59040;
 }
 
 /* Formulario Contacto */
@@ -202,4 +212,16 @@ header > input{
 }
 .button-form:hover{
     background-color: darkgray;
+}
+
+/* Footer */
+.footer{
+    grid-area: footer;
+    background-color: #111111;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border-top: 2px dotted rgba(255, 255, 255, 0.4);
 }
