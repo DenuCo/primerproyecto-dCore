@@ -1,0 +1,355 @@
+/* ==========================================================================
+   ESTILOS-GLOBALES.CSS — Proyecto dCore
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. VARIABLES GLOBALES (Design Tokens)
+   --------------------------------------------------------------------------
+   Guardamos acá los colores y fuentes que se repetían en los 4 archivos
+   originales. Beneficio DRY: si mañana querés cambiar el color del header,
+   lo cambiás UNA sola vez acá y se actualiza en todo el sitio.
+   ========================================================================== */
+:root {
+    /* Colores de fondo */
+    --color-bg-header-menu: #16202c;
+    --color-bg-main: #0D2B35;
+    --color-bg-footer: #111111;
+
+    /* Colores de texto */
+    --color-texto-claro: antiquewhite;
+    --color-texto-oscuro: black;
+
+    /* Botones: Agregar al carrito (violeta) */
+    --color-btn-carrito: rgb(168, 152, 226);
+    --color-btn-carrito-hover: rgb(120, 105, 175);
+
+    /* Botones: Agregar a favoritos (dorado) */
+    --color-btn-favorito: #e0b169;
+    --color-btn-favorito-hover: #c59040;
+
+    /* Botón del menú lateral */
+    --color-menu-link-bg: rgb(149, 134, 201);
+
+    /* Bordes y detalles */
+    --color-borde-oscuro: darkslategrey;
+    --borde-punteado: 2px dotted rgba(255, 255, 255, 0.4);
+
+    /* Tipografías */
+    --fuente-principal: "Winky Sans";
+    --fuente-logo: "Indie Flower", sans-serif;
+}
+
+
+/* ==========================================================================
+   2. RESET Y ESTILOS BASE
+   --------------------------------------------------------------------------
+   Reset universal + estilos de etiquetas globales (h1, h2, h3, p, a, label).
+   Estaban duplicados idénticos en los 4 archivos originales.
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p, a {
+    color: var(--color-texto-claro);
+    font-family: var(--fuente-principal);
+}
+
+label {
+    color: var(--color-texto-oscuro);
+}
+
+
+/* ==========================================================================
+   3. LAYOUT PRINCIPAL (CSS Grid)
+   --------------------------------------------------------------------------
+   La estructura de grilla (header / menu / contenido / footer) es la
+   columna vertebral de TODAS las páginas del sitio. Estaba copiada y
+   pegada 4 veces sin ningún cambio.
+   ========================================================================== */
+.layout {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 85px 1fr 70px;
+    grid-template-areas:
+        "header header"
+        "menu contenido"
+        "footer footer";
+    min-height: 100vh;
+}
+
+
+/* ==========================================================================
+   4. HEADER
+   ========================================================================== */
+.header {
+    grid-area: header;
+    background-color: var(--color-bg-header-menu);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header > h1 > a {
+    font-family: var(--fuente-logo);
+    font-size: 50px;
+    line-height: 1; /* achico la caja de la fuente */
+    text-decoration: none;
+}
+
+header > input {
+    padding: 5px;
+    width: 50%;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.usuario-registrado ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+
+.usuario-registrado a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+   5. MENÚ DE NAVEGACIÓN LATERAL
+   ========================================================================== */
+.menu {
+    grid-area: menu;
+    background-color: var(--color-bg-header-menu);
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* centra el menu horizontalmente */
+}
+
+.menu-flex {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-flex li {
+    border-radius: 5px;
+}
+
+.menu-flex a {
+    text-decoration: none;
+    color: var(--color-texto-oscuro);
+    font-size: 20px;
+    background-color: var(--color-menu-link-bg);
+    border: 2px solid var(--color-texto-oscuro);
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    width: 100%; /* ocupa todo el ancho disponible del <li> */
+    text-align: center;
+}
+
+
+/* ==========================================================================
+   6. CONTENIDO PRINCIPAL (contenedor genérico)
+   ========================================================================== */
+.main-content {
+    grid-area: contenido;
+    background-color: var(--color-bg-main);
+    padding: 25px;
+    border-top: var(--borde-punteado);
+    border-left: var(--borde-punteado);
+}
+
+
+/* ==========================================================================
+   7. TARJETAS DE OBRAS (Comics / E-Books) — usado en index, comics y ebooks
+   ========================================================================== */
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+    margin-bottom: 25px;
+}
+
+.obra-container {
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Contenedor de botones dentro de cada tarjeta */
+.al-carrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Botones "Agregar al Carrito" y "Agregar a Favoritos" */
+.agregar-carrito {
+    background-color: var(--color-btn-carrito);
+    color: var(--color-texto-oscuro);
+    border: 2px solid var(--color-borde-oscuro);
+    border-radius: 20px;
+    padding: 5px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.agregar-carrito:hover {
+    background-color: var(--color-btn-carrito-hover);
+}
+
+.agregar-favorito {
+    background-color: var(--color-btn-favorito);
+    color: var(--color-texto-oscuro);
+    border: 2px solid var(--color-borde-oscuro);
+    border-radius: 20px;
+    padding: 5px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.agregar-favorito:hover {
+    background-color: var(--color-btn-favorito-hover);
+}
+
+
+/* ==========================================================================
+   8. SECCIÓN HERO / TENDENCIAS — específico de index.html
+   ========================================================================== */
+.trends {
+    border: 2px solid var(--color-texto-oscuro);
+    border-radius: 15px;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.trends-media {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* el gif "rellena" todo el espacio sin deformarse */
+}
+
+
+/* ==========================================================================
+   9. FORMULARIO DE CONTACTO — específico de index.html
+   ========================================================================== */
+.contacto-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 2px solid var(--color-texto-oscuro);
+    border-radius: 15px;
+    background-color: aliceblue;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.contacto-form input {
+    border: 1px solid gray;
+}
+
+.contacto-form input:hover,
+.contacto-form textarea:hover {
+    background-color: lightgrey;
+}
+
+.contacto-form button {
+    border: 2px solid var(--color-borde-oscuro);
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.button-form:hover {
+    background-color: darkgray;
+}
+
+
+/* ==========================================================================
+   10. LISTAS DE CARRITO Y FAVORITOS — específico de carrito.html / favoritos.html
+   ========================================================================== */
+#lista-carrito,
+#lista-favoritos {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrito li,
+#lista-favoritos li {
+    background-color: #f4f4f4;
+    margin: 5px 0; /* Superior-Inferior Izquierda-Derecha */
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-family: var(--fuente-principal);
+}
+
+/* Botones "Vaciar Carrito" y "Vaciar Favoritos" */
+#vaciar-carrito,
+#vaciar-favoritos {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: darkred;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 145, 145);
+    font-size: 15px;
+    font-family: var(--fuente-principal);
+    cursor: pointer;
+}
+
+#vaciar-carrito:hover,
+#vaciar-favoritos:hover {
+    background-color: rgb(255, 0, 13);
+}
+
+#comprar-carrito {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: rgb(73, 116, 17);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(114, 212, 131);
+    font-size: 15px;
+    font-family: var(--fuente-principal);
+    cursor: pointer;
+}
+
+#comprar-carrito:hover {
+    background-color: rgb(44, 153, 62);
+}
+
+
+/* ==========================================================================
+   11. FOOTER
+   ========================================================================== */
+.footer {
+    grid-area: footer;
+    background-color: var(--color-bg-footer);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: var(--borde-punteado);
+}
