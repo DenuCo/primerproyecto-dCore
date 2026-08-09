@@ -128,36 +128,3 @@ function cargarFavoritos() {
         listaFavoritos.appendChild(li);
     }
 }
-
-// ------------------------------------------------------------------
-// LIBROS TRAÍDOS DESDE LA API (solo aplica en apibooks.html)
-// ------------------------------------------------------------------
-var contenedorProductos = document.getElementById("productos-container");
-if (contenedorProductos) {
-    fetch('https://softwium.com/api/books?limit=10')
-    .then(response => {
-        if (!response.ok) {       //si no hay respuesta de la api lanzamos un ERROR que detiene la ejecución de la app
-            throw new Error(`HTTP error! Status: ${response.status}`); // status aclara el tipo de error numerico
-        }
-        return response.json();
-    })
-    .then(data => {         // data tiene el response.json() obtenido del 1er then -> data es un conj de objetos
-        data.forEach(producto => {      // producto itera sobre cada elemento de data
-            const tarjeta = document.createElement("div");
-            tarjeta.innerHTML = `
-                <h3>${producto.title}</h3>
-                <p>Autores: ${producto.authors}</p>
-                <button class="agregar-favorito" data-id="${producto.id}" data-nombre="${producto.title}" data-precio="0">Agregar a Favoritos</button>
-            `;
-            contenedorProductos.appendChild(tarjeta);
-        });
-        contenedorProductos.addEventListener('click', function(event) {
-            if (event.target.classList.contains('agregar-favorito')) {
-                agregarFavorito(event);
-            }
-        });
-    })
-    .catch(error => {
-        console.log("Error de internet");
-    });
-}
